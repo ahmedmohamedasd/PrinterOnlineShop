@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>٦ إدارة المخزون — Printer Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs-theme.css" />
+</head>
+<body>
+  <header class="docs-topbar">
+    <a href="../index.html" class="docs-home-link">الرئيسية</a>
+    <span class="docs-page-title">٦ إدارة المخزون</span>
+  </header>
+
+  <div class="docs-wrap">
+    <h1 class="docs-section-title">إدارة المخزون</h1>
+
+    <div class="docs-prose">
+      <p>المخزون يربط بين ما يظهر للعميل في الصفحة وما يحدث عند تأكيد الطلب. بدون هذا الرابط تظهر مشكلات مثل بيع كمية غير موجودة أو عدم إظهار النفاد.</p>
+      <h3>تحديد كمية كل منتج</h3>
+      <p>لكل صنف (أو متغير مثل لون الحبر) كمية رقمية يحددها المدير أو يستوردها من نظام خارجي لاحقًا.</p>
+      <h3>التقليل التلقائي بعد الشراء</h3>
+      <p>عند انتقال الطلب لحالة تستلزم خصم المخزون (غالبًا عند <strong>Processing</strong> أو عند التأكيد حسب سياسة العمل)، تُخصم كميات البنود من المخزون. يجب توثيق النقطة الزمنية لتفادي الخصم مرتين أو عدم الإرجاع عند الإلغاء.</p>
+      <h3>التوفر التلقائي</h3>
+      <p>إذا الكمية = ٠ يُعرض المنتج كـ <strong>غير متاح</strong> ولا يُسمح بإضافته للسلة.</p>
+      <h3>تنبيه عند قرب النفاد</h3>
+      <p>عندما تنزل الكمية تحت عتبة (مثلاً ٥ قطع) يظهر تنبيه في لوحة التحكم وربما بريدًا للمدير — القيمة قابلة للضبط.</p>
+      <h3>يرتبط بـ</h3>
+      <p>تفاصيل المنتج والسلة (٤)، الطلبات (٤)، ولوحة تحكم المخزون (٧).</p>
+    </div>
+
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — جدول مخزون</span>
+      <table class="mock-table">
+        <thead>
+          <tr><th>المنتج</th><th>الكمية</th><th>الحالة</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>طابعة ليزر Pro 100</td>
+            <td>١٢</td>
+            <td><span style="color:var(--color-success)">متوفر</span></td>
+          </tr>
+          <tr>
+            <td>حبر أصفر ٤١٢</td>
+            <td>٣</td>
+            <td><span class="mock-badge mock-badge-pending">قرب النفاد</span></td>
+          </tr>
+          <tr>
+            <td>رول ملصقات قديم</td>
+            <td>٠</td>
+            <td><span class="mock-badge mock-badge-cancelled">غير متاح</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

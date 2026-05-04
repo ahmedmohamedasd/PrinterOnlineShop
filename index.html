@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Printer Shopping — وثائق المشروع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/docs-theme.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <header class="docs-topbar">
+    <span class="docs-page-title">وثائق Printer Shopping</span>
+    <button type="button" class="docs-home-link" onclick="window.print()" style="border:none;cursor:pointer;font:inherit">طباعة الفهرس</button>
+  </header>
+
+  <div class="docs-wrap">
+    <div class="docs-hero">
+      <h1>Printer Shopping</h1>
+      <p>منصة تجارة إلكترونية متخصصة في الطابعات والأحبار ومستلزمات الطباعة — اختر أي قسم أدناه لقراءة الشرح المفصل ومشاهدة معاينة بصرية للفكرة.</p>
+    </div>
+
+    <h2 class="docs-section-title" style="margin-top:0">خريطة الوثيقة</h2>
+    <p class="docs-prose" style="margin-top:-0.5rem;color:var(--color-muted)">يوضح المخطط التالي ترتيب الأفكار في الوثيقة وكيف ترتبط الأقسام ببعضها (عرض توضيحي).</p>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart TD
+  intro["١ مقدمة المشروع"] --> goals["٢ أهداف المشروع"]
+  goals --> roles["٣ أنواع المستخدمين"]
+  roles --> features["٤ الخصائص الأساسية"]
+  features --> discounts["٥ نظام الخصومات"]
+  features --> inventory["٦ إدارة المخزون"]
+  features --> adminDash["٧ لوحة التحكم"]
+  adminDash --> reports["١٢ التقارير"]
+  features --> i18n["٨ تعدد اللغات"]
+  features --> brand["٩ الهوية البصرية"]
+  features --> usecases["١٠ Use Cases"]
+  features --> nfr["١١ متطلبات غير وظيفية"]
+  goals --> timeline["١٣ خطة التنفيذ"]
+  features --> packages["١٤ الباقات والأسعار"]
+      </pre>
+    </div>
+
+    <h2 class="docs-section-title">الأقسام</h2>
+    <div class="docs-grid">
+      <article class="docs-card">
+        <h2>١ مقدمة المشروع</h2>
+        <p>اسم المشروع، الوصف، ونطاق المنتجات (طابعات، أحبار، مستلزمات).</p>
+        <a class="docs-card-link" href="sections/01-intro.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٢ أهداف المشروع</h2>
+        <p>لماذا نبني المنصة: مبيعات، مخزون، تجربة مستخدم، لوحة تحكم، توسع.</p>
+        <a class="docs-card-link" href="sections/02-goals.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٣ أنواع المستخدمين</h2>
+        <p>زائر، مستخدم مسجّل، مدير نظام — وما يستطيع كل منهم فعله.</p>
+        <a class="docs-card-link" href="sections/03-users.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٤ الخصائص الأساسية</h2>
+        <p>منتجات، بحث، فلاتر، سلة، طلبات، دفع عند الاستلام، حساب، تقييمات — مع معاينات واجهة.</p>
+        <a class="docs-card-link" href="sections/04-features.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٥ نظام الخصومات</h2>
+        <p>خصم بنسبة وخصم حسب الكمية مع أمثلة سعرية.</p>
+        <a class="docs-card-link" href="sections/05-discounts.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٦ إدارة المخزون</h2>
+        <p>كميات، تخفيض تلقائي بعد البيع، توفر، تنبيهات نفاد.</p>
+        <a class="docs-card-link" href="sections/06-inventory.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٧ لوحة التحكم</h2>
+        <p>إحصائيات، رسوم، إدارة منتجات وطلبات ومستخدمين وخصومات ومخزون.</p>
+        <a class="docs-card-link" href="sections/07-admin.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٨ تعدد اللغات</h2>
+        <p>العربية أساسًا مع إمكانية الإنجليزية وتبديل اللغة.</p>
+        <a class="docs-card-link" href="sections/08-i18n.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>٩ الهوية البصرية</h2>
+        <p>الألوان المقترحة والتوجه التصميمي (بسيط، سريع، متجاوب).</p>
+        <a class="docs-card-link" href="sections/09-branding.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>١٠ Use Cases</h2>
+        <p>تدفق المستخدم وتدفق المدير من البداية للنهاية.</p>
+        <a class="docs-card-link" href="sections/10-use-cases.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>١١ متطلبات غير وظيفية</h2>
+        <p>سرعة، أمان، توسع، دعم عدد كبير من المستخدمين.</p>
+        <a class="docs-card-link" href="sections/11-nfr.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>١٢ التقارير</h2>
+        <p>مبيعات، طلبات، أكثر المنتجات مبيعًا.</p>
+        <a class="docs-card-link" href="sections/12-reports.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>١٣ خطة التنفيذ</h2>
+        <p>المراحل والمدة الزمنية المقترحة للمشروع.</p>
+        <a class="docs-card-link" href="sections/13-roadmap.html">فتح القسم</a>
+      </article>
+      <article class="docs-card">
+        <h2>١٤ الباقات والأسعار</h2>
+        <p>Basic مقابل Advanced — ما الذي يدخل كل باقة.</p>
+        <a class="docs-card-link" href="sections/14-packages.html">فتح القسم</a>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "base",
+      securityLevel: "loose",
+      themeVariables: {
+        primaryColor: "#e2e8f0",
+        primaryTextColor: "#1a202c",
+        primaryBorderColor: "#1e5a8e",
+        lineColor: "#4a5568",
+        secondaryColor: "#f4f7fb",
+        tertiaryColor: "#fff",
+        fontFamily: "Noto Sans Arabic, sans-serif"
+      },
+      flowchart: { htmlLabels: true, useMaxWidth: true }
+    });
+  </script>
+</body>
+</html>

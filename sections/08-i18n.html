@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>٨ تعدد اللغات — Printer Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs-theme.css" />
+</head>
+<body>
+  <header class="docs-topbar">
+    <a href="../index.html" class="docs-home-link">الرئيسية</a>
+    <span class="docs-page-title">٨ تعدد اللغات</span>
+  </header>
+
+  <div class="docs-wrap">
+    <h1 class="docs-section-title">تعدد اللغات (Localization)</h1>
+
+    <div class="docs-prose">
+      <p>اللغة الأساسية للنظام في الوثيقة هي <strong>العربية</strong>، مع إمكانية إضافة <strong>English</strong> وتبديل اللغة من واجهة المستخدم. التعدد اللغوي يؤثر على اتجاه الصفحة (RTL/LTR)، تنسيق الأرقام والعملة، وملفات الترجمة لكل النصوص الثابتة.</p>
+      <h3>ما الذي يعنيه ذلك للتنفيذ؟</h3>
+      <ul>
+        <li>فصل النصوص عن القوالب (مفاتيح ترجمة).</li>
+        <li>تخزين تفضيل اللغة في الجلسة أو حساب المستخدم.</li>
+        <li>تأكيد أن لوحة التحكم تدعم نفس اللغات أو على الأقل العربية للمدير.</li>
+      </ul>
+      <p>المعاينة أدناه <strong>توضيح فقط</strong>: تبديل زر يغيّر عناوين وهمية دون تطبيق i18n حقيقي كامل.</p>
+      <h3>يرتبط بـ</h3>
+      <p>الهوية البصرية (٩)، الباقة Advanced (١٤).</p>
+    </div>
+
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — تبديل لغة وهمي</span>
+      <div class="lang-toggle">
+        <button type="button" id="btn-ar" class="active">العربية</button>
+        <button type="button" id="btn-en">English</button>
+      </div>
+      <div class="mock-browser" id="i18n-mock" dir="rtl">
+        <div class="mock-toolbar" style="justify-content:space-between">
+          <span data-i18n="title">Printer Shopping</span>
+          <span data-i18n="cart">السلة (٢)</span>
+        </div>
+        <div style="padding:1rem">
+          <h3 data-i18n="headline" style="margin:0 0 0.5rem">المنتجات المميزة</h3>
+          <p data-i18n="sub" style="margin:0;color:var(--color-muted);font-size:0.9rem">أفضل العروض على الطابعات والأحبار.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const strings = {
+      ar: {
+        title: "Printer Shopping",
+        cart: "السلة (٢)",
+        headline: "المنتجات المميزة",
+        sub: "أفضل العروض على الطابعات والأحبار."
+      },
+      en: {
+        title: "Printer Shopping",
+        cart: "Cart (2)",
+        headline: "Featured products",
+        sub: "Best deals on printers and ink."
+      }
+    };
+    const mock = document.getElementById("i18n-mock");
+    const btnAr = document.getElementById("btn-ar");
+    const btnEn = document.getElementById("btn-en");
+
+    function setLang(lang) {
+      const s = strings[lang];
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        const key = el.getAttribute("data-i18n");
+        if (s[key]) el.textContent = s[key];
+      });
+      const rtl = lang === "ar";
+      mock.setAttribute("dir", rtl ? "rtl" : "ltr");
+      btnAr.classList.toggle("active", rtl);
+      btnEn.classList.toggle("active", !rtl);
+    }
+    btnAr.addEventListener("click", function () { setLang("ar"); });
+    btnEn.addEventListener("click", function () { setLang("en"); });
+  </script>
+</body>
+</html>

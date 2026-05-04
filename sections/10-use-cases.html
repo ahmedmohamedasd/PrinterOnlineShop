@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>١٠ Use Cases — Printer Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs-theme.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <header class="docs-topbar">
+    <a href="../index.html" class="docs-home-link">الرئيسية</a>
+    <span class="docs-page-title">١٠ Use Cases</span>
+  </header>
+
+  <div class="docs-wrap">
+    <h1 class="docs-section-title">سيناريوهات الاستخدام (Use Cases)</h1>
+
+    <div class="docs-prose">
+      <p>سيناريوهات الاستخدام تصف <strong>التسلسل الزمني</strong> لأهم المسارات دون الدخول في تفاصيل شاشة كل زر. تُستخدم للاتفاق بين العميل والفريق على «ما الذي يجب أن يعمل» قبل التصميم التفصيلي.</p>
+      <h3>تدفق المستخدم (User Flow)</h3>
+      <p>من أول زيارة حتى معرفة حالة الطلب بعد الشراء. أي انقطاع في المسار (مثلاً منتج غير متاح) يجب أن يكون له سلوك واضح.</p>
+      <h3>تدفق المدير (Admin Flow)</h3>
+      <p>من الدخول للوحة حتى العمليات اليومية: منتجات، مخزون، طلبات، تقارير.</p>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.1rem">مخطط — المستخدم</h2>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart TD
+  A["دخول الموقع"] --> B["تصفح المنتجات"]
+  B --> C["إضافة للسلة"]
+  C --> D["فتح السلة"]
+  D --> E["تأكيد الطلب"]
+  E --> F["إنشاء Order"]
+  F --> G["متابعة حالة الطلب"]
+      </pre>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.1rem">مخطط — المدير</h2>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart TD
+  A2["تسجيل دخول المدير"] --> B2["لوحة المعلومات"]
+  B2 --> C2["إضافة منتج"]
+  B2 --> D2["تحديث المخزون"]
+  B2 --> E2["متابعة الطلبات"]
+  E2 --> F2["تغيير حالة الطلب"]
+  B2 --> G2["مراجعة التقارير"]
+      </pre>
+    </div>
+
+    <div class="docs-prose">
+      <h3>يرتبط بـ</h3>
+      <p>الأقسام ٣، ٤، ٧، ١٢.</p>
+    </div>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "base",
+      securityLevel: "loose",
+      themeVariables: {
+        primaryColor: "#e2e8f0",
+        primaryTextColor: "#1a202c",
+        primaryBorderColor: "#1e5a8e",
+        lineColor: "#4a5568",
+        fontFamily: "Noto Sans Arabic, sans-serif"
+      },
+      flowchart: { htmlLabels: true, useMaxWidth: true }
+    });
+  </script>
+</body>
+</html>

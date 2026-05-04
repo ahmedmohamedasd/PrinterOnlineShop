@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>٤ الخصائص الأساسية — Printer Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs-theme.css" />
+</head>
+<body>
+  <header class="docs-topbar">
+    <a href="../index.html" class="docs-home-link">الرئيسية</a>
+    <span class="docs-page-title">٤ الخصائص الأساسية</span>
+  </header>
+
+  <div class="docs-wrap">
+    <h1 class="docs-section-title">الخصائص الأساسية</h1>
+
+    <div class="docs-prose">
+      <p>هذا القلب الوظيفي للمتجر من جهة المشتري: من اكتشاف المنتج حتى تأكيد الطلب ومتابعته. كل جزء أدناه يشرح <strong>ماذا يحدث للمستخدم</strong> و<strong>ماذا يجب أن يحفظ النظام</strong> مفاهيميًا.</p>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">عرض المنتجات والبحث والفلترة</h2>
+    <div class="docs-prose">
+      <p>يعرض النظام قائمة منتجات مع صورة واسم وسعر. البحث يصفّي النتائج حسب النص. الفلترة حسب السعر والفئة تضيق النتائج لتسريع اختيار الطابعة أو الحبر المناسب.</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — كتالوج + فلاتر</span>
+      <div class="mock-browser">
+        <div class="mock-browser-bar">
+          <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+          <span class="mock-url">/منتجات</span>
+        </div>
+        <div class="mock-toolbar">
+          <span style="font-weight:700">Printer Shopping</span>
+          <input type="text" placeholder="ابحث عن طابعة أو حبر…" readonly style="max-width:220px" />
+        </div>
+        <div class="mock-filters">
+          <span class="mock-chip">السعر: حتى ٣٠٠٠ ج</span>
+          <span class="mock-chip">الفئة: طابعات ليزر</span>
+          <span class="mock-chip">متوفر فقط</span>
+        </div>
+        <div class="mock-product-grid">
+          <div class="mock-product">
+            <div class="mock-product-img">🖨️</div>
+            <div class="mock-product-body">طابعة ليزر Pro<br /><span class="mock-price">٢٨٥٠ ج</span></div>
+          </div>
+          <div class="mock-product">
+            <div class="mock-product-img">🧪</div>
+            <div class="mock-product-body">حبر أسود XL<br /><span class="mock-price">١٨٠ ج</span></div>
+          </div>
+          <div class="mock-product">
+            <div class="mock-product-img">📄</div>
+            <div class="mock-product-body">رول ملصقات<br /><span class="mock-price">٩٥ ج</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">تفاصيل المنتج</h2>
+    <div class="docs-prose">
+      <p>صفحة المنتج تعرض الاسم، السعر، الصورة، والكمية المتاحة. إذا كانت الكمية صفر يظهر «غير متاح» ويُعطّل زر الإضافة للسلة (يرتبط بمنطق المخزون في القسم ٦).</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — صفحة منتج</span>
+      <div class="mock-browser">
+        <div class="mock-browser-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-url">/منتجات/laser-pro-100</span></div>
+        <div class="mock-detail">
+          <div class="mock-detail-img">🖨️</div>
+          <div>
+            <h3 style="margin:0 0 0.35rem">طابعة ليزر Pro 100</h3>
+            <p style="margin:0;color:var(--color-muted);font-size:0.9rem">فئة: طابعات ليزر · SKU: LP-100</p>
+            <p style="font-size:1.4rem;font-weight:700;color:var(--color-primary);margin:0.75rem 0">٢٨٥٠ ج</p>
+            <p style="margin:0 0 0.75rem"><strong>المتاح:</strong> ١٢ قطعة</p>
+            <button type="button" class="mock-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">سلة المشتريات</h2>
+    <div class="docs-prose">
+      <p>المستخدم يضيف منتجات، يعدّل الكميات، أو يحذف بنودًا. الإجمالي يُحسب تلقائيًا مع مراعاة أي خصومات مفعّلة (القسم ٥). السلة قد تكون مرتبطة بالجلسة أو بالحساب حسب التصميم التقني لاحقًا.</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — السلة</span>
+      <div class="mock-browser">
+        <div class="mock-browser-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-url">/سلة</span></div>
+        <div style="padding:1rem">
+          <table class="mock-cart-table">
+            <thead><tr><th>المنتج</th><th>السعر</th><th>الكمية</th><th>الإجمالي</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>طابعة ليزر Pro 100</td>
+                <td>٢٨٥٠ ج</td>
+                <td><span class="mock-qty"><button type="button">−</button> 1 <button type="button">+</button></span></td>
+                <td>٢٨٥٠ ج</td>
+              </tr>
+              <tr>
+                <td>حبر أسود XL</td>
+                <td>١٨٠ ج</td>
+                <td><span class="mock-qty"><button type="button">−</button> 2 <button type="button">+</button></span></td>
+                <td>٣٦٠ ج</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="text-align:left;margin:1rem 0 0;font-size:1.1rem"><strong>الإجمالي:</strong> ٣٢١٠ ج</p>
+          <button type="button" class="mock-btn" style="margin-top:0.75rem">متابعة الطلب</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">الطلبات وحالات الطلب</h2>
+    <div class="docs-prose">
+      <p>عند التأكيد يُنشأ <strong>طلب (Order)</strong> برقم مرجعي وقائمة بنود وعنوان/طريقة تسليم وحالة. الحالات في وثيقتك:</p>
+      <ul>
+        <li><strong>Pending:</strong> تم الإنشاء ولم يُعالج بعد من الإدارة (في انتظار المراجعة أو الدفع عند الاستلام حسب سياساتكم).</li>
+        <li><strong>Processing:</strong> جاري تجهيز الطلب (سحب من المخزون، تجهيز للشحن أو للتسليم).</li>
+        <li><strong>Delivered:</strong> تم تسليم الطلب للعميل.</li>
+        <li><strong>Cancelled:</strong> أُلغي الطلب ولا يُعتبر نشطًا للبيع؛ يجب أن يُعاد المخزون إن كان مخصومًا عند المعالجة (قرار تنفيذي مهم).</li>
+      </ul>
+      <p>المستخدم يتابع الحالة من حسابه؛ المدير يغيّرها من لوحة التحكم (القسم ٧).</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — بطاقة طلب + الشارات</span>
+      <div class="mock-status-grid">
+        <div class="mock-order-card">
+          <div class="mock-order-header">
+            <div>
+              <strong>طلب #١٠٤٢</strong>
+              <div style="font-size:0.85rem;color:var(--color-muted)">٣ بنود · ٣٢١٠ ج</div>
+            </div>
+            <span class="mock-badge mock-badge-processing">Processing</span>
+          </div>
+          <div style="font-size:0.88rem;color:var(--color-muted)">آخر تحديث: جاري تجهيز الشحنة</div>
+        </div>
+        <div style="font-size:0.88rem;line-height:1.9">
+          <div class="mock-status-row"><span class="mock-badge mock-badge-pending">Pending</span> في انتظار بدء المعالجة</div>
+          <div class="mock-status-row"><span class="mock-badge mock-badge-processing">Processing</span> قيد التجهيز</div>
+          <div class="mock-status-row"><span class="mock-badge mock-badge-delivered">Delivered</span> تم التسليم</div>
+          <div class="mock-status-row"><span class="mock-badge mock-badge-cancelled">Cancelled</span> ملغى</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">الدفع</h2>
+    <div class="docs-prose">
+      <p>في نطاق هذه الوثيقة الدفع <strong>عند الاستلام فقط (Cash)</strong>. لا يوجد بوابة دفع إلكتروني في النطاق الحالي؛ أي إضافة لاحقة تُذكر كتوسعة.</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — تأكيد الدفع عند الاستلام</span>
+      <div class="mock-order-card" style="max-width:none">
+        <strong>إتمام الطلب</strong>
+        <p style="margin:0.5rem 0;font-size:0.95rem">سيتم تحصيل المبلغ نقدًا عند استلام الطلب.</p>
+        <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem"><input type="radio" checked disabled /> الدفع عند الاستلام</label>
+        <button type="button" class="mock-btn" style="margin-top:0.75rem">تأكيد الطلب</button>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">حساب المستخدم</h2>
+    <div class="docs-prose">
+      <p>تسجيل حساب، تسجيل دخول، تعديل البيانات الشخصية، وتغيير كلمة المرور. هذه الشاشات تتطلب ممارسات أمان أساسية (تشفير كلمة المرور، حماية الجلسات) كما في القسم ١١.</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — ملخص الحساب (قراءة)</span>
+      <div class="mock-browser">
+        <div class="mock-browser-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-url">/حسابي</span></div>
+        <div style="padding:1rem;font-size:0.95rem">
+          <p><strong>الاسم:</strong> أحمد محمد</p>
+          <p><strong>البريد:</strong> ahmed@example.com</p>
+          <p><strong>الهاتف:</strong> ٠١٠٠ ×××× ××××</p>
+          <button type="button" class="mock-btn mock-btn-secondary">تعديل البيانات</button>
+          <button type="button" class="mock-btn mock-btn-secondary" style="margin-inline-start:0.5rem">تغيير كلمة المرور</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="docs-section-title" style="font-size:1.15rem">التقييمات</h2>
+    <div class="docs-prose">
+      <p>المستخدم يقيّم المنتج بعد الشراء (أو وفق سياسة تسمح بالتقييم للمسجلين فقط) ويكتب تعليقًا. يساعد ذلك المشترين الآخرين ويدعم تقارير «أكثر المنتجات تقييمًا» مستقبلًا.</p>
+    </div>
+    <div class="docs-demo">
+      <span class="docs-demo-label">معاينة — تقييم + تعليق</span>
+      <div class="mock-order-card" style="max-width:none">
+        <div style="font-size:1.5rem;letter-spacing:0.15rem">★★★★☆</div>
+        <p style="margin:0.5rem 0 0;font-size:0.9rem;color:var(--color-muted)">«سرعة التوصيل ممتازة، الطابعة كما في الوصف.»</p>
+        <textarea readonly rows="2" style="width:100%;margin-top:0.75rem;padding:0.5rem;border-radius:6px;border:1px solid var(--color-border);font-family:inherit">اكتب تعليقك هنا…</textarea>
+        <button type="button" class="mock-btn" style="margin-top:0.5rem">إرسال التقييم</button>
+      </div>
+    </div>
+
+    <div class="docs-prose">
+      <h3>يرتبط بـ</h3>
+      <p>الخصومات (٥)، المخزون (٦)، لوحة التحكم (٧)، والتقارير (١٢).</p>
+    </div>
+  </div>
+</body>
+</html>
